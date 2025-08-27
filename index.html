@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #A2D2FF; /* Light blue */
+            background-color: #A2D2FF;
             color: #D6EBFF;
             display: flex;
             justify-content: center;
@@ -34,7 +34,7 @@
         h1 {
             font-weight: 600;
             font-size: 2rem;
-            color: #0288d1; /* A slightly darker blue */
+            color: #0288d1;
             margin-bottom: 0.5rem;
             text-align: center;
         }
@@ -54,7 +54,7 @@
             font-size: 1rem;
             margin-bottom: 1.5rem;
             color: #00203D;
-             font-style: italic; /* This makes the text italic */
+            font-style: italic;
         }
 
         .form-group {
@@ -75,11 +75,11 @@
             border-radius: 8px;
             font-family: inherit;
             font-size: 1rem;
-            background-color: #EBF5FF; /* Light blue text box color */
+            background-color: #EBF5FF;
             transition: all 0.3s ease;
             resize: vertical;
             min-height: 50px;
-            margin-bottom: 1.5rem; /* Adds space after each textarea */
+            margin-bottom: 1.5rem;
         }
 
         textarea:focus {
@@ -107,8 +107,8 @@
             transform: translateY(-2px);
         }
 
-        .essay-output-container  {
-            color: #000000; /* This will make all text inside this container black */
+        .essay-output-container {
+            color: #000000;
             display: none;
             background-color: #EBF5FF;
             border: 1px dashed #42a5f5;
@@ -131,7 +131,57 @@
             color: #01579b;
         }
 
-        /* Responsive adjustments */
+        .accordion-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .accordion-header {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            color: #01579b;
+            font-weight: 600;
+            padding: 0.5rem 0;
+            user-select: none;
+        }
+
+        .accordion-arrow {
+            font-size: 1.2rem;
+            margin-right: 0.5rem;
+            transform: rotate(-90deg);
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-arrow.open {
+            transform: rotate(0deg);
+        }
+
+        .accordion-content {
+            background-color: #f0f8ff;
+            border-left: 3px solid #0288d1;
+            padding: 1rem;
+            margin-top: 0.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            color: #00203D;
+        }
+
+        .accordion-content p {
+            margin: 0 0 0.5rem 0;
+            font-weight: 600;
+        }
+
+        .accordion-content ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .accordion-content li {
+            margin-bottom: 0.25rem;
+        }
+
         @media (max-width: 600px) {
             body {
                 padding: 1rem;
@@ -153,7 +203,6 @@
         <h1>Argumentative Essay Guide</h1>
         <p class="intro">Fill in the fields below to build your essay. The example text is a placeholder to help guide you.</p>
 
-        <!-- Essay Input Form -->
         <div id="essay-form">
             <h2>Introduction</h2>
             <div class="form-group">
@@ -178,10 +227,25 @@
                 <label for="p2-2">First Reason (TS1)</label>
                 <textarea id="p2-2" placeholder="is the degradation of the physical environment."></textarea>
             </div>
-            <div class="form-group">
-                <label for="p2-3">Transition Into CC 1</label>
-                <textarea id="p2-3" placeholder="It's often argued that"></textarea>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span class="accordion-arrow">&#9654;</span>
+                    <label for="p2-3">Transition Into CC 1</label>
+                </div>
+                <div class="accordion-content">
+                    <p>Other ways to introduce a counterclaim:</p>
+                    <ul>
+                        <li>Some may argue that...</li>
+                        <li>It is often believed that...</li>
+                        <li>On the other hand, it could be said that...</li>
+                        <li>Opponents of this idea claim that...</li>
+                        <li>However, others believe that...</li>
+                        <li>While some people think...</li>
+                        <li>A common concern is that...</li>
+                    </ul>
+                </div>
             </div>
+            <textarea id="p2-3" placeholder="It's often argued that"></textarea>
             <div class="form-group">
                 <label for="p2-4">Counter-claim 1</label>
                 <textarea id="p2-4" placeholder="tourism provides the financial support to support and protect and maintain this ecosystem."></textarea>
@@ -194,10 +258,33 @@
                 <label for="p2-6">CC1 Evidence</label>
                 <textarea id="p2-6" placeholder="“tourism in Ecuador ... generates $1.2 billion per year.”"></textarea>
             </div>
-            <div class="form-group">
-                <label for="p2-7">Transition into Rebuttal/ Claim 1.1</label>
-                <textarea id="p2-7" placeholder="While this money is undoubtedly useful for preserving the islands,"></textarea>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span class="accordion-arrow">&#9654;</span>
+                    <label for="p2-7">Transition into Rebuttal/ Claim 1.1</label>
+                </div>
+                <div class="accordion-content">
+                    <p>Refuting a Counterclaim</p>
+                    <ul>
+                        <li>However, this claim is flawed because...</li>
+                        <li>This argument fails to consider...</li>
+                        <li>While that may be true, it overlooks...</li>
+                        <li>Despite this point, the evidence shows...</li>
+                        <li>This perspective doesn't account for...</li>
+                        <li>That argument is not convincing because...</li>
+                        <li>This objection is not valid since...</li>
+                        <li>Even though that may be the case, it is clear that...</li>
+                        <li>Despite this, it's more accurate to say that...</li>
+                        <li>Nevertheless, it's important to remember that...</li>
+                        <li>Ultimately, the strongest evidence suggests that...</li>
+                        <li>While there are valid points on both sides, the facts show...</li>
+                        <li>This perspective, however, is countered by...</li>
+                        <li>Nonetheless, ...</li>
+                        <li>On the contrary, ...</li>
+                    </ul>
+                </div>
             </div>
+            <textarea id="p2-7" placeholder="While this money is undoubtedly useful for preserving the islands,"></textarea>
             <div class="form-group">
                 <label for="p2-8">Rebuttal / Claim 1.1</label>
                 <textarea id="p2-8" placeholder="it has stimulated unregulated growth that is polluting a formerly peaceful environment:"></textarea>
@@ -210,10 +297,31 @@
                 <label for="p2-10">Elaboration 1.1</label>
                 <textarea id="p2-10" placeholder="Governments and businesses seek growth and profits, even though that is not in the best interest of the product they are selling."></textarea>
             </div>
-            <div class="form-group">
-                <label for="p2-11">Transition into Claim 1.2</label>
-                <textarea id="p2-11" placeholder="As a result,"></textarea>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span class="accordion-arrow">&#9654;</span>
+                    <label for="p2-11">Transition into Claim 1.2</label>
+                </div>
+                <div class="accordion-content">
+                    <p>Transitioning from One Claim to the Next:</p>
+                    <ul>
+                        <li>Furthermore,...</li>
+                        <li>In addition, ...</li>
+                        <li>Another key point is...</li>
+                        <li>Additionally...</li>
+                        <li>Moreover...</li>
+                        <li>Building on this, one can also see that...</li>
+                        <li>Besides,</li>
+                        <li>Another reason....</li>
+                        <li>As a result,...</li>
+                        <li>Consequently, ...</li>
+                        <li>Therefore,</li>
+                        <li>Indeed, ...</li>
+                        <li>In fact,</li>
+                    </ul>
+                </div>
             </div>
+            <textarea id="p2-11" placeholder="As a result,"></textarea>
             <div class="form-group">
                 <label for="p2-12">Claim 1.2</label>
                 <textarea id="p2-12" placeholder=" the very thing that used to attract visitors, a peaceful preserve with plants and animals never seen before, is starting to vanish.” (Passage Two)."></textarea>
@@ -230,7 +338,7 @@
                 <label for="p2-15">Elaboration, Link to TS 2</label>
                 <textarea id="p2-15" placeholder="This growth is not just distressing for real environmental tourists, it is also problematic for the animals themselves."></textarea>
             </div>
-            
+
             <h2>Body Paragraph 2</h2>
             <div class="form-group">
                 <label for="p3-1">Transition into TS2</label>
@@ -288,7 +396,7 @@
                 <label for="p3-14">Elaboration, Link to TS 3</label>
                 <textarea id="p3-14" placeholder="It is thus apparent that Galapagos tourism both directly and directly endangers the very animals they are meant to protect."></textarea>
             </div>
-            
+
             <h2>Body Paragraph 3</h2>
             <div class="form-group">
                 <label for="p4-1">Transition to TS3</label>
@@ -334,7 +442,7 @@
                 <label for="p4-11">Elaboration, Closure</label>
                 <textarea id="p4-11" placeholder="If the Galapagos Islands are serious about promoting environmental preservation, they need to make this destination more about science and less about likes."></textarea>
             </div>
-            
+
             <h2>Conclusion</h2>
             <div class="form-group">
                 <label for="p5-1">Restate thesis</label>
@@ -348,11 +456,10 @@
                 <label for="p5-3">Call to action</label>
                 <textarea id="p5-3" placeholder="The economic and educational benefits are still worthwhile, so the most sensible solution would be to impose limits that allow true ecotourism to continue while better protecting the environment. Otherwise, there will be nothing left for visitors to see on these special Ecuadorian islands."></textarea>
             </div>
-            
+
             <button id="generate-btn">Generate Essay</button>
         </div>
 
-        <!-- Essay Output Container -->
         <div id="essay-output" class="essay-output-container">
             <h2 class="essay-title">Your Completed Essay</h2>
             <div id="essay-text"></div>
@@ -360,76 +467,89 @@
     </div>
 
     <script>
-        document.getElementById('generate-btn').addEventListener('click', function() {
-            const getVal = (id) => document.getElementById(id).value;
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to generate the essay
+            document.getElementById('generate-btn').addEventListener('click', function() {
+                const getVal = (id) => document.getElementById(id).value;
 
-            // Introduction Paragraph
-            const intro = [
-                getVal('p1-1'),
-                getVal('p1-2'),
-                getVal('p1-3')
-            ].filter(Boolean).join(' ');
+                // Introduction Paragraph
+                const intro = [
+                    getVal('p1-1'),
+                    getVal('p1-2'),
+                    getVal('p1-3')
+                ].filter(Boolean).join(' ');
 
-            // Body Paragraph 1
-            const body1 = [
-                getVal('p2-1'), getVal('p2-2'), getVal('p2-3'), getVal('p2-4'), getVal('p2-5'),
-                getVal('p2-6'), getVal('p2-7'), getVal('p2-8'), getVal('p2-9'), getVal('p2-10'),
-                getVal('p2-11'), getVal('p2-12'), getVal('p2-13'), getVal('p2-14'), getVal('p2-15')
-            ].filter(Boolean).join(' ');
+                // Body Paragraph 1
+                const body1 = [
+                    getVal('p2-1'), getVal('p2-2'), getVal('p2-3'), getVal('p2-4'), getVal('p2-5'),
+                    getVal('p2-6'), getVal('p2-7'), getVal('p2-8'), getVal('p2-9'), getVal('p2-10'),
+                    getVal('p2-11'), getVal('p2-12'), getVal('p2-13'), getVal('p2-14'), getVal('p2-15')
+                ].filter(Boolean).join(' ');
 
-            // Body Paragraph 2
-            const body2 = [
-                getVal('p3-1'), getVal('p3-2'), getVal('p3-3'), getVal('p3-4'), getVal('p3-5'),
-                getVal('p3-6'), getVal('p3-7'), getVal('p3-8'), getVal('p3-9'), getVal('p3-10'),
-                getVal('p3-11'), getVal('p3-12'), getVal('p3-13'), getVal('p3-14')
-            ].filter(Boolean).join(' ');
+                // Body Paragraph 2
+                const body2 = [
+                    getVal('p3-1'), getVal('p3-2'), getVal('p3-3'), getVal('p3-4'), getVal('p3-5'),
+                    getVal('p3-6'), getVal('p3-7'), getVal('p3-8'), getVal('p3-9'), getVal('p3-10'),
+                    getVal('p3-11'), getVal('p3-12'), getVal('p3-13'), getVal('p3-14')
+                ].filter(Boolean).join(' ');
 
-            // Body Paragraph 3
-            const body3 = [
-                getVal('p4-1'), getVal('p4-2'), getVal('p4-3'), getVal('p4-4'), getVal('p4-5'),
-                getVal('p4-6'), getVal('p4-7'), getVal('p4-8'), getVal('p4-9'), getVal('p4-10'),
-                getVal('p4-11')
-            ].filter(Boolean).join(' ');
+                // Body Paragraph 3
+                const body3 = [
+                    getVal('p4-1'), getVal('p4-2'), getVal('p4-3'), getVal('p4-4'), getVal('p4-5'),
+                    getVal('p4-6'), getVal('p4-7'), getVal('p4-8'), getVal('p4-9'), getVal('p4-10'),
+                    getVal('p4-11')
+                ].filter(Boolean).join(' ');
 
-            // Conclusion Paragraph
-            const conclusion = [
-                getVal('p5-1'),
-                getVal('p5-2'),
-                getVal('p5-3')
-            ].filter(Boolean).join(' ');
-            
-            let essayText = '';
-            
-            if (intro) {
-              essayText += 'Introduction\n' + intro + '\n\n';
-            }
-            if (body1) {
-              essayText += 'Body Paragraph 1\n' + body1 + '\n\n';
-            }
-            if (body2) {
-              essayText += 'Body Paragraph 2\n' + body2 + '\n\n';
-            }
-            if (body3) {
-              essayText += 'Body Paragraph 3\n' + body3 + '\n\n';
-            }
-            if (conclusion) {
-              essayText += 'Conclusion\n' + conclusion;
-            }
+                // Conclusion Paragraph
+                const conclusion = [
+                    getVal('p5-1'),
+                    getVal('p5-2'),
+                    getVal('p5-3')
+                ].filter(Boolean).join(' ');
 
-            const essayOutput = document.getElementById('essay-output');
-            document.getElementById('essay-text').textContent = essayText;
-            essayOutput.classList.add('show');
-            essayOutput.scrollIntoView({ behavior: 'smooth' });
+                let essayText = '';
+
+                if (intro) {
+                    essayText += 'Introduction\n' + intro + '\n\n';
+                }
+                if (body1) {
+                    essayText += 'Body Paragraph 1\n' + body1 + '\n\n';
+                }
+                if (body2) {
+                    essayText += 'Body Paragraph 2\n' + body2 + '\n\n';
+                }
+                if (body3) {
+                    essayText += 'Body Paragraph 3\n' + body3 + '\n\n';
+                }
+                if (conclusion) {
+                    essayText += 'Conclusion\n' + conclusion;
+                }
+
+                const essayOutput = document.getElementById('essay-output');
+                document.getElementById('essay-text').textContent = essayText;
+                essayOutput.classList.add('show');
+                essayOutput.scrollIntoView({ behavior: 'smooth' });
+            });
+
+            // Function for the accordion
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const accordionItem = header.parentElement;
+                    const content = accordionItem.querySelector('.accordion-content');
+                    const arrow = header.querySelector('.accordion-arrow');
+
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        arrow.classList.remove('open');
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        arrow.classList.add('open');
+                    }
+                });
+            });
         });
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
