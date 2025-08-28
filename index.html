@@ -134,7 +134,7 @@
         .accordion-item {
             display: flex;
             flex-direction: column;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         .accordion-header {
@@ -150,17 +150,15 @@
         .accordion-arrow {
             font-size: 1.2rem;
             margin-right: 0.5rem;
-            transform: rotate(-90deg);
+            transform: rotate(90deg);
             transition: transform 0.3s ease;
         }
 
         .accordion-arrow.open {
-            transform: rotate(0deg);
+            transform: rotate(180deg);
         }
 
         .accordion-content {
-            background-color: #f0f8ff;
-            border-left: 3px solid #0288d1;
             padding: 1rem;
             max-height: 0;
             overflow: hidden;
@@ -275,11 +273,7 @@
                         <li>This objection is not valid since...</li>
                         <li>Even though that may be the case, it is clear that...</li>
                         <li>Despite this, it's more accurate to say that...</li>
-                        <li>Nevertheless, it's important to remember that...</li>
-                        <li>Ultimately, the strongest evidence suggests that...</li>
-                        <li>While there are valid points on both sides, the facts show...</li>
-                        <li>This perspective, however, is countered by...</li>
-                        <li>Nonetheless, ...</li>
+                        <li>Nevertheless, ...</li>
                         <li>On the contrary, ...</li>
                     </ul>
                 </div>
@@ -348,10 +342,25 @@
                 <label for="p3-2">Second Reason (TS2)</label>
                 <textarea id="p3-2" placeholder="which is the stress caused to the animals themselves."></textarea>
             </div>
-            <div class="form-group">
-                <label for="p3-3">Transition into CC2</label>
-                <textarea id="p3-3" placeholder="It is often believed that"></textarea>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span class="accordion-arrow">&#9654;</span>
+                    <label for="p3-3">Transition into CC2</label>
+                </div>
+                <div class="accordion-content">
+                    <p>Other ways to introduce a counterclaim:</p>
+                    <ul>
+                        <li>Some may argue that...</li>
+                        <li>It is often believed that...</li>
+                        <li>On the other hand, it could be said that...</li>
+                        <li>Opponents of this idea claim that...</li>
+                        <li>However, others believe that...</li>
+                        <li>While some people think...</li>
+                        <li>A common concern is that...</li>
+                    </ul>
+                </div>
             </div>
+            <textarea id="p3-3" placeholder="It is often believed that"></textarea>
             <div class="form-group">
                 <label for="p3-4">Counter-claim 2</label>
                 <textarea id="p3-4" placeholder="ecotourism is worthwhile for educational purposes, especially in a place like the Galapagos Islands which boasts so many rare species:"></textarea>
@@ -360,10 +369,29 @@
                 <label for="p3-5">CC2 Evidence</label>
                 <textarea id="p3-5" placeholder="the famous Galapagos finch studied by Darwin, the giant tortoise, and several others await visitors to the island (Passage 1)."></textarea>
             </div>
-            <div class="form-group">
-                <label for="p3-6">Transition into Rebuttal/ Claim 2.1</label>
-                <textarea id="p3-6" placeholder="However, this argument fails to consider "></textarea>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span class="accordion-arrow">&#9654;</span>
+                    <label for="p3-6">Transition into Rebuttal/ Claim 2.1</label>
+                </div>
+                <div class="accordion-content">
+                    <p>Refuting a Counterclaim</p>
+                    <ul>
+                        <li>However, this claim is flawed because...</li>
+                        <li>This argument fails to consider...</li>
+                        <li>While that may be true, it overlooks...</li>
+                        <li>Despite this point, the evidence shows...</li>
+                        <li>This perspective doesn't account for...</li>
+                        <li>That argument is not convincing because...</li>
+                        <li>This objection is not valid since...</li>
+                        <li>Even though that may be the case, it is clear that...</li>
+                        <li>Despite this, it's more accurate to say that...</li>
+                        <li>Nevertheless, ...</li>
+                        <li>On the contrary, ...</li>
+                    </ul>
+                </div>
             </div>
+            <textarea id="p3-6" placeholder="However, this argument fails to consider "></textarea>
             <div class="form-group">
                 <label for="p3-7">Rebuttal / Claim 2.1</label>
                 <textarea id="p3-7" placeholder="the toll that human access to these rare species might have."></textarea>
@@ -380,10 +408,31 @@
                 <label for="p3-10">Elaboration, Link to 2.2</label>
                 <textarea id="p3-10" placeholder="This can endanger them in the wild, as other predators want more than a photo and a story to tell. And that is not the worst."></textarea>
             </div>
-            <div class="form-group">
-                <label for="p3-11">Claim 2.2</label>
-                <textarea id="p3-11" placeholder="Humans also pose a more direct risk to the animals they come in contact with."></textarea>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span class="accordion-arrow">&#9654;</span>
+                    <label for="p3-11">Transition into Claim 2.2</label>
+                </div>
+                <div class="accordion-content">
+                    <p>Transitioning from One Claim to the Next:</p>
+                    <ul>
+                        <li>Furthermore,...</li>
+                        <li>In addition, ...</li>
+                        <li>Another key point is...</li>
+                        <li>Additionally...</li>
+                        <li>Moreover...</li>
+                        <li>Building on this, one can also see that...</li>
+                        <li>Besides,</li>
+                        <li>Another reason....</li>
+                        <li>As a result,...</li>
+                        <li>Consequently, ...</li>
+                        <li>Therefore,</li>
+                        <li>Indeed, ...</li>
+                        <li>In fact,</li>
+                    </ul>
+                </div>
             </div>
+            <textarea id="p3-11" placeholder="Humans also pose a more direct risk to the animals they come in contact with."></textarea>
             <div class="form-group">
                 <label for="p3-12">Transition to Evidence 2.2</label>
                 <textarea id="p3-12" placeholder="As the article states, "></textarea>
@@ -406,10 +455,25 @@
                 <label for="p4-2">Third Reason (TS3)</label>
                 <textarea id="p4-2" placeholder="turning a nature preserve into a tourist trap trivializes the serious scientific work being done by real environmental scientists."></textarea>
             </div>
-            <div class="form-group">
-                <label for="p4-3">Transition to CC 3</label>
-                <textarea id="p4-3" placeholder="It may be true that"></textarea>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span class="accordion-arrow">&#9654;</span>
+                    <label for="p4-3">Transition to CC 3</label>
+                </div>
+                <div class="accordion-content">
+                    <p>Other ways to introduce a counterclaim:</p>
+                    <ul>
+                        <li>Some may argue that...</li>
+                        <li>It is often believed that...</li>
+                        <li>On the other hand, it could be said that...</li>
+                        <li>Opponents of this idea claim that...</li>
+                        <li>However, others believe that...</li>
+                        <li>While some people think...</li>
+                        <li>A common concern is that...</li>
+                    </ul>
+                </div>
             </div>
+            <textarea id="p4-3" placeholder="It may be true that"></textarea>
             <div class="form-group">
                 <label for="p4-4">Counter-claim 3</label>
                 <textarea id="p4-4" placeholder="visiting the Galapagos Islands can send visitors home with a"></textarea>
@@ -418,10 +482,29 @@
                 <label for="p4-5">CC3 Evidence</label>
                 <textarea id="p4-5" placeholder="“renewed passion for the preservation of wildlife” (Passage One)."></textarea>
             </div>
-            <div class="form-group">
-                <label for="p4-6">Rebuttal / Claim 3.1</label>
-                <textarea id="p4-6" placeholder="Education is a noble goal, but the massive number of visitors is evidence that more than just conservationists are making this trip:"></textarea>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span class="accordion-arrow">&#9654;</span>
+                    <label for="p4-6">Rebuttal / Claim 3.1</label>
+                </div>
+                <div class="accordion-content">
+                    <p>Refuting a Counterclaim</p>
+                    <ul>
+                        <li>However, this claim is flawed because...</li>
+                        <li>This argument fails to consider...</li>
+                        <li>While that may be true, it overlooks...</li>
+                        <li>Despite this point, the evidence shows...</li>
+                        <li>This perspective doesn't account for...</li>
+                        <li>That argument is not convincing because...</li>
+                        <li>This objection is not valid since...</li>
+                        <li>Even though that may be the case, it is clear that...</li>
+                        <li>Despite this, it's more accurate to say that...</li>
+                        <li>Nevertheless, ...</li>
+                        <li>On the contrary, ...</li>
+                    </ul>
+                </div>
             </div>
+            <textarea id="p4-6" placeholder="Education is a noble goal, but the massive number of visitors is evidence that more than just conservationists are making this trip:"></textarea>
             <div class="form-group">
                 <label for="p4-7">Evidence 3.1</label>
                 <textarea id="p4-7" placeholder="“We talk about ecotourism, but…People aren't even coming for the wildlife any more. They just come for a vacation” (Passage Two)."></textarea>
@@ -430,10 +513,31 @@
                 <label for="p4-8">Elaboration, Link to 3.2</label>
                 <textarea id="p4-8" placeholder="This change in public translates to changes in behaviors."></textarea>
             </div>
-            <div class="form-group">
-                <label for="p4-9">Claim 3.2</label>
-                <textarea id="p4-9" placeholder="Now people want to swim with the seals and pose for photos,"></textarea>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span class="accordion-arrow">&#9654;</span>
+                    <label for="p4-9">Claim 3.2</label>
+                </div>
+                <div class="accordion-content">
+                    <p>Transitioning from One Claim to the Next:</p>
+                    <ul>
+                        <li>Furthermore,...</li>
+                        <li>In addition, ...</li>
+                        <li>Another key point is...</li>
+                        <li>Additionally...</li>
+                        <li>Moreover...</li>
+                        <li>Building on this, one can also see that...</li>
+                        <li>Besides,</li>
+                        <li>Another reason....</li>
+                        <li>As a result,...</li>
+                        <li>Consequently, ...</li>
+                        <li>Therefore,</li>
+                        <li>Indeed, ...</li>
+                        <li>In fact,</li>
+                    </ul>
+                </div>
             </div>
+            <textarea id="p4-9" placeholder="Now people want to swim with the seals and pose for photos,"></textarea>
             <div class="form-group">
                 <label for="p4-10">Evidence 3.2</label>
                 <textarea id="p4-10" placeholder="reducing “a pristine natural environment” to a mere “place where tourists take ‘selfies’ with giant tortoises” (Passage Two)."></textarea>
@@ -553,5 +657,3 @@
     </script>
 </body>
 </html>
-
-
