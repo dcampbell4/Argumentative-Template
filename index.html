@@ -150,12 +150,12 @@
         .accordion-arrow {
             font-size: 1.2rem;
             margin-right: 0.5rem;
-            transform: rotate(-90deg);
+            transform: rotate(90deg);
             transition: transform 0.3s ease;
         }
 
         .accordion-arrow.open {
-            transform: rotate(0deg);
+            transform: rotate(180deg);
         }
 
         .accordion-content {
@@ -653,8 +653,26 @@
                     }
                 });
             });
+
+            // ---- NEW CODE FOR LOCAL STORAGE ----
+            const textareas = document.querySelectorAll('textarea');
+
+            // Load saved content from local storage
+            textareas.forEach(textarea => {
+                const savedValue = localStorage.getItem(textarea.id);
+                if (savedValue) {
+                    textarea.value = savedValue;
+                }
+            });
+
+            // Save content to local storage on input
+            textareas.forEach(textarea => {
+                textarea.addEventListener('input', () => {
+                    localStorage.setItem(textarea.id, textarea.value);
+                });
+            });
+            // ---- END OF NEW CODE ----
         });
     </script>
 </body>
 </html>
-
