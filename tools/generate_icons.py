@@ -3,7 +3,7 @@
 Generate PWA icons (maskable-safe) + Apple touch icons from a source logo.
 
 Usage:
-  python tools/generate_icons.py "path/to/logo.png" --theme "#A2D2FF" --out icons --padding 0.12
+  python tools/generate_icons.py "https://i.postimg.cc/gcCdtgqs/Elegant-Emblem-Logo-Design.png" --theme "#A2D2FF" --out icons --padding 0.12
 """
 from pathlib import Path
 from PIL import Image
