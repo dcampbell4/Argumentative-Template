@@ -1,0 +1,2 @@
+pip install pillow
+python tools/generate_icons.py "https://i.postimg.cc/gcCdtgqs/Elegant-Emblem-Logo-Design.png" --theme "#A2D2FF"
