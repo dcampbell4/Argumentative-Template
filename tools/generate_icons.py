@@ -4,7 +4,7 @@ Generate PWA icons (maskable-safe) + Apple touch icons from a URL or local file.
 
 Examples:
   # From URL (recommended in your case)
-  python tools/generate_icons.py --logo-url "https://i.postimg.cc/gcCdtgqs/Elegant-Emblem-Logo-Design.png" --out "./icons" --theme "#4CAF50" -v
+  python tools/generate_icons.py --logo-url "https://i.postimg.cc/gcCdtgqs/Elegant-Emblem-Logo-Design.png" --out "./icons" --theme "#A2D2FF" -v
 
   # From local file
   python tools/generate_icons.py --logo "assets/logo.png" --out "./icons" -v
