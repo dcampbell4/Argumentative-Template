@@ -2,12 +2,12 @@
   "name": "Argumentative Writing Coach",
   "short_name": "WritingCoach",
   "description": "An interactive coach that guides students through every component of an argumentative essay.",
-  "start_url": "/?source=pwa",
+  "start_url": "https://argumentativewritingcoach.netlify.app/?source=pwa",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#ffffff",
-  "theme_color": "#4CAF50",
+  "theme_color": "#A2D2FF",
   "icons": [
     {
       "src": "/icons/icon-192.png",
