@@ -1,11 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Argumentative Essay Coach</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <style>
+  <meta charset="utf-8" />
+  <title>Argumentative Essay Coach</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- PWA manifest + meta -->
+  /manifest.json
+  <meta name="theme-color" content="#4CAF50">
+
+  <!-- Icons -->
+  /icons/icon-192.png
+  /icons/apple-touch-icon-180.png
+
+  <!-- iOS PWA -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <!-- (Optional) Basic styles -->
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; color: #111; }
+    header { background: #4CAF50; color: #fff; padding: 1rem 1.25rem; }
+    main { padding: 1.25rem; max-width: 900px; margin: 0 auto; }
+    .install-hint { background: #f6fff6; border: 1px solid #cde8d1; padding: .75rem 1rem; border-radius: .5rem; margin: 1rem 0; }
+    footer { color: #666; font-size: .9rem; padding: 2rem 1.25rem; }
+  </style>
+</head>
+<body>
+  <header><h1 style="margin:0;">Argumentative Essay Coach</h1></header>
+
+  <main>
+    <section class="install-hint" aria-live="polite">
+      <strong>Tip:</strong> Install this app from your browser menu (Add to Home Screen / Install App).
+    </section>
+
+<style>
         body {
             font-family: 'Inter', sans-serif;
             background-color: #A2D2FF;
@@ -659,5 +688,21 @@
     <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="dcampbell46" data-description="Support me on Buy me a coffee!" data-message="Interested in more tools like this?" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18">
         
     </script>    
+</body>
+
+  </main>
+
+  <footer>© <span id="year"></span> Argumentative Writing Coach</footer>
+
+  <!-- Service worker registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .catch(err => console.error('SW registration failed:', err));
+      });
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
